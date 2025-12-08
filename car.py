@@ -12,13 +12,11 @@ class Car:
 
 
     def display_info(self):
-        print(f'General info about cars: \n')
-        print(f'Car: {self.brand} {self.model} {self.year} {self.type}\nfuel type: {self.fuel}\ncurrent mileage: {self.mileage} km\n')
+        #print(f'General info about cars:')
+        print(f'Car: {self.brand} {self.model} {self.year} {self.type}\nfuel type: {self.fuel}\ncurrent mileage: {self.mileage} km')
         if self.available == True:
             print('Available now!')
         else:
             print('Not available, check others')
         
-car1 = Car('Toyota', 'Corolla', '2022', 64853, 'hybrid', 'sedan', True, 'automatic', 999)
 
-car1.display_info()
