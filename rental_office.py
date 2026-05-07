@@ -17,14 +17,14 @@ class RentalOffice:
                 print(car)
 
     def rent_car(self, customer, car):
-        if car.available:
-            rental = Rental(customer, car)
-            car.available = False
-            self.rentals.append(rental)
-            customer.rental_cars.append(rental)
-            print('Rental car rented! ')
-        else:
-            print('No available rental cars. Choose others.')
+        if car.available != True:
+            print(f'This car is not available to rent. Choose others.')
+            return 1        
+        rental = Rental(customer, car)
+        car.available = False
+        self.rentals.append(rental)
+        customer.rental_cars.append(rental)
+        print('Rental car rented! ') 
 
     def return_rental_cars(self, customer, car):
         for rental in customer.rental_cars:
